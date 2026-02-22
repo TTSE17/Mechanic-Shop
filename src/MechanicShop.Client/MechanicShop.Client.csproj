@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+    <PropertyGroup>
+        <RuntimeIdentifier>browser-wasm</RuntimeIdentifier>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Blazored.LocalStorage"/>
+        <PackageReference Include="Humanizer"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication"/>
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer"/>
+        <PackageReference Include="Microsoft.AspNetCore.SignalR.Client"/>
+        <PackageReference Include="Microsoft.Extensions.Http"/>
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt"/>
+
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\MechanicShop.Contracts\MechanicShop.Contracts.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="Properties\launchSettings.json"/>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <!--        <TargetFramework>net9.0</TargetFramework>-->
+        <!--        <ImplicitUsings>enable</ImplicitUsings>-->
+        <!--        <Nullable>enable</Nullable>-->
+
+        <!--        <IsPackable>false</IsPackable>-->
+        <IsTestProject>false</IsTestProject>
+        <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NSubstitute"/>
+        <PackageReference Include="xunit"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\MechanicShop.Application\MechanicShop.Application.csproj"/>
+        <ProjectReference Include="..\..\src\MechanicShop.Domain\MechanicShop.Domain.csproj"/>
+        <ProjectReference Include="..\..\src\MechanicShop.Infrastructure\MechanicShop.Infrastructure.csproj"/>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\MechanicShop.Domain\MechanicShop.Domain.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Features\Customers\Commands\"/>
+        <Folder Include="Features\Customers\Queries\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore"/>
+        <PackageReference Include="QuestPDF"/>
+    </ItemGroup>
+
+    <!--    <PropertyGroup>-->
+    <!--        <TargetFramework>net9.0</TargetFramework>-->
+    <!--        <ImplicitUsings>enable</ImplicitUsings>-->
+    <!--        <Nullable>enable</Nullable>-->
+    <!--    </PropertyGroup>-->
+
+</Project>

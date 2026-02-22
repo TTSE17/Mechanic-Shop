@@ -1,0 +1,31 @@
+Set Up : 
+
+new projects in src folder : 
+ dotnet new classlib  -o MechanicShop.Contracts 
+ dotnet new blazorwasm  -o MechanicShop.Client  
+ dotnet new web -o MechanicShop.Api (Presentation)
+ dotnet new classlib  -o MechanicShop.Infrastructure
+ dotnet new classlib  -o MechanicShop.Application  
+ dotnet new classlib  -o MechanicShop.Domain   
+
+reference projects in src folder : 
+ dotnet add .\MechanicShop.Api\ reference .\MechanicShop.Contracts\
+ dotnet add .\MechanicShop.Client\ reference .\MechanicShop.Contracts\
+ dotnet add .\MechanicShop.Infrastructure\ reference .\MechanicShop.Application\
+ dotnet add .\MechanicShop.Application\ reference .\MechanicShop.Domain\
+ dotnet add .\MechanicShop.Api\ reference .\MechanicShop.Application\ 
+
+solution in MechanicShop folder : 
+ dotnet new sln -n MechanicShop 
+ dotnet sln add (ls -r **/*.csproj)  
+ dotnet new gitignore 
+
+Domain Event In Domain Layer :
+ <PackageReference Include="MediatR" Version="13.0.0" />
+ 
+new projects in tests folder : 
+ dotnet new xunit -o MechanicShop.Tests.Common  
+ dotnet new xunit -o MechanicShop.Domain.UnitTests 
+ dotnet new xunit -o MechanicShop.Application.UnitTests
+ dotnet new xunit -o MechanicShop.Application.SubcutaneousTests
+ dotnet new xunit -o MechanicShop.Api.IntegrationTests 
