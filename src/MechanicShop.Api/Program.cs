@@ -64,4 +64,6 @@ app.MapHub<WorkOrderHub>("/hubs/workorders");
 
 app.Run();
 
+public partial class Program { }
+
 // "DefaultConnection": "Server = . ; Database = MechanicShopDb ; Trusted_Connection=True; MultipleActiveResultSets = true ; TrustServerCertificate = True;"
